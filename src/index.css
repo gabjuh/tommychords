@@ -42,34 +42,37 @@ h1 {
   line-height: 1.1;
 }
 
+#chord-input-wrapper {
+  margin-top: 4rem;
+}
+
 #chord-table-input {
-  margin-top: 50px;
-  transform: translateX(-22.5px);
+  transform: translateX(-8px);
 }
 
-#chord-table-input td {
+/* #chord-table-input td {
   position: relative;
-}
+} */
 
-#chord-table-input td span {
+/* #chord-table-input td span {
   position: absolute;
-}
+} */
 
-#chord-table-input thead td span {
+/* #chord-table-input thead span {
   position: absolute;
-  right: -.75rem;
-}
-
+  /* right: -1rem; */
+  /* bottom: .8rem; */
+/* } */
+/* 
 #chord-table-input tbody td {
   border: 1px solid #bbb;
-}
+} */
 
-#chord-table-input tbody td span {
-  position: absolute;
+/* #chord-table-input tbody td span {
   right: -1rem;
-}
+} */
 
-#chord-table-input tbody tr:first-child td:not(td:first-of-type) {
+/* #chord-table-input tbody tr:first-child td:not(td:first-of-type) {
   border-top: var(--stage-height) solid #bbb;
 }
 
@@ -81,11 +84,35 @@ h1 {
   padding-top: .5rem;
 }
 
-#chord-table-input td {
+#chord-table-input thead td {
+  position: relative;
+  height: 70px;
+}
+
+#chord-table-input tbody td {
   width: 60px;
   height: 100px;
+}
+
+#chord-table-input thead td span {
+  padding: .2rem;
 }
 
 #chord-table-input td:first-of-type {
   border: none;
 }
+
+#chord-table-input thead span:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: red;
+}
+
+#chord-table-input thead td,
+#chord-table-input tbody td {
+  z-index: -500;
+}
+#chord-table-input thead td span,
+#chord-table-input tbody td span {
+  z-index: 10;
+} */
