@@ -3,6 +3,7 @@ import Finger from "./Finger";
 
 interface String {
   i: number
+  horizontalDistance: number
   griff: {
     fret: number;
     finger: number;
@@ -10,9 +11,7 @@ interface String {
   line: number
 }
 
-const String: React.FC<String> = ({ i, line, griff}) => {
-
-  const horizontalDistance = 60
+const String: React.FC<String> = ({ i, line, horizontalDistance, griff}) => {
 
   const getHorizontalPosition = i * horizontalDistance
 

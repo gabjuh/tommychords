@@ -49,5 +49,77 @@
       null,
       null
     ]
-  } 
+  } ,
+  {
+    "name": "E",
+    "base": 0,
+    "strings": [
+      {
+        "fret": 0,
+        "finger": 0
+      },
+      {
+        "fret": 0,
+        "finger": 0
+      },
+      {
+        "fret": 1,
+        "finger": 1
+      },
+      {
+        "fret": 2,
+        "finger": 3
+      },
+      {
+        "fret": 2,
+        "finger": 2
+      },
+      {
+        "fret": 0,
+        "finger": 0
+      }
+    ]
+  },
+  {
+    "name": "F",
+    "base": 0,
+    "strings": [
+      {
+        "fret": 1,
+        "finger": 1
+      },
+      {
+        "fret": 1,
+        "finger": 1
+      },
+      {
+        "fret": 2,
+        "finger": 2
+      },
+      {
+        "fret": 3,
+        "finger": 4
+      },
+      {
+        "fret": 3,
+        "finger": 3
+      },
+      {
+        "fret": 1,
+        "finger": 1
+      }
+    ]
+  },
+  {
+    "name": "Test",
+    "base": 0,
+    "strings": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  }   
 ]
