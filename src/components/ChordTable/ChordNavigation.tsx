@@ -1,14 +1,16 @@
 import React from "react";
 
 interface ChordNavigation {
-  setSelectedId: [selectedId: number,
+  selectedId: [
+    selectedId: number,
     setSelectedId: Function,
-    objLength: number]
+    objLength: number
+  ]
 }
 
-const ChordNavigation: React.FC<ChordNavigation> = ({ setSelectedId }) => {
+const ChordNavigation: React.FC<ChordNavigation> = ({ selectedId }) => {
 
-  const [id, setId, objLen] = setSelectedId
+  const [id, setId, objLen] = selectedId
 
   return (
     <>

@@ -34,7 +34,7 @@ const ChordTable: React.FC<ChordTable> = ({
       <div id="chord-table-wrapper" className="relative mb-[6rem]">
 
         <ChordName
-          setSelectedId={[selectedId, setSelectedId, objLength]}
+          selectedId={[selectedId, setSelectedId, objLength]}
           name={obj[selectedId].name}
         />
 
