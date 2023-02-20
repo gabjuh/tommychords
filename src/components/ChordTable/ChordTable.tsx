@@ -5,12 +5,22 @@ import chords_static from "../../chords_static.json"
 import PlayedStrings from "./PlayedStrings";
 import Base from "./Base";
 import Fretboard from "./Fretboard";
+import { IChord } from "./IChord";
 
 interface ChordTable {
-  newChord?: true
+  input?: true
+  newChordObj: [
+    newChordObj: IChord,
+    setNewChordObj: React.Dispatch<React.SetStateAction<IChord>>
+  ]
 }
 
-const ChordTable: React.FC<ChordTable> = ({ newChord }) => {
+const ChordTable: React.FC<ChordTable> = ({
+  input,
+  newChordObj
+}) => {
+
+  const [newChord, setNewChord] = newChordObj
 
   const horizontalDistance = 60
 

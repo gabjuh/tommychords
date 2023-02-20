@@ -2,6 +2,7 @@ import React from "react";
 import ChordTable from "../ChordTable/ChordTable";
 import { useState } from "react";
 import PageTitle from "../PageComponents/PageTitle";
+import { IChord } from "../ChordTable/IChord";
 
 interface New {
 
@@ -14,13 +15,7 @@ const New: React.FC<New> = () => {
     finger: number
   }
 
-  interface Chord {
-    name: string
-    base: number
-    strings: (String | null)[]
-  }
-
-  const [newChordObj, setNewChordObj] = useState<Chord>({
+  const [newChordObj, setNewChordObj] = useState<IChord>({
     "name": "?",
     "base": 0,
     "strings": [
@@ -37,7 +32,8 @@ const New: React.FC<New> = () => {
     <>
       <PageTitle text="New Chord" />
       <ChordTable
-        newChord={true}
+        input={true}
+        newChordObj={[newChordObj, setNewChordObj]}
       />
     </>
   )
