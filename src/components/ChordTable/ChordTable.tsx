@@ -9,7 +9,7 @@ import ChordNavigation from "./ChordNavigation";
 import { IChord } from "./IChord";
 
 interface ChordTable {
-  input?: true
+  isInput?: 'new' | 'edit'
   newChordObj: [
     newChordObj: IChord,
     setNewChordObj: React.Dispatch<React.SetStateAction<IChord>>
@@ -17,7 +17,7 @@ interface ChordTable {
 }
 
 const ChordTable: React.FC<ChordTable> = ({
-  input,
+  isInput,
   newChordObj
 }) => {
 
@@ -35,6 +35,7 @@ const ChordTable: React.FC<ChordTable> = ({
       <div id="chord-table-wrapper" className="relative mb-[6rem]">
 
         <ChordName
+          isInput={isInput}
           name={obj[selectedId].name}
         />
 

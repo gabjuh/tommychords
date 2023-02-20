@@ -2,6 +2,7 @@ import React from "react";
 
 interface ChordName {
   name: string
+  isInput?: 'new' | 'edit'
 }
 
 const ChordName: React.FC<ChordName> = ({ name }) => {
