@@ -5,11 +5,11 @@ import chords_static from "../../chords_static.json"
 import String from "./String";
 import PlayedStrings from "./PlayedStrings";
 
-interface ChordTableInput {
+interface ChordTable {
   newChord?: true
 }
 
-const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
+const ChordTable: React.FC<ChordTable> = ({ newChord }) => {
 
   const horizontalDistance = 60
 
@@ -22,7 +22,7 @@ const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
 
   return (
     <>
-      <div id="chord-input-wrapper" className="relative mb-[6rem]">
+      <div id="chord-table-wrapper" className="relative mb-[6rem]">
         <ChordName
           setSelectedId={[selectedId, setSelectedId, objLength]}
           name={obj[selectedId].name}
@@ -46,7 +46,7 @@ const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
               <div className="relative">
                 <div
                   className="absolute border-t-[#ddd] w-[301px] mx-auto left-0 right-0"
-                  id="chord-table-input"
+                  id="chord-table"
                   style={{
                     borderTop: isFirstFret ? `${stageLineHeight}px solid #ddd` : '0',
                     top: !isFirstFret ? `${getVerticalPosition + stageLineHeight}px` : `${getVerticalPosition}px`
@@ -73,4 +73,4 @@ const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
   )
 }
 
-export default ChordTableInput
+export default ChordTable
