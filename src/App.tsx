@@ -14,50 +14,11 @@ function App() {
 
   const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false)
 
-  const toggleMenuOpen = () => setIsMenuOpen(!isMenuOpen)
-
-  const closeMenu = (event: any) => {
-    if (!event.target.closest("#menu")) {
-      setIsMenuOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    // setIsMenuOpen(false)
-    document.addEventListener('click', closeMenu)
-    return () => {
-      document.removeEventListener('click', closeMenu)
-    }
-  }, [])
-
+  const handelOpenMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const [darkTheme, setDarkTheme] = useState(true)
 
-  const handleTheme = () => {
-    setDarkTheme(!darkTheme)
-  }
-
-  const handelOpenMenu = () => {
-    const menu = document.getElementById('menu') as HTMLElement | null
-
-    if (!isMenuOpen) {
-      // if closed, remove hidden
-      menu?.classList.remove('hidden')
-      toggleMenuOpen()
-      setTimeout(() => {
-        // with the timeout remove opacity and rotate
-        menu?.classList.remove('opacity-0', '-rotate-90')
-      }, 100)
-    } else {
-      // if opened, add opacity-0 and rotate
-      menu?.classList.add('opacity-0', '-rotate-90')
-      toggleMenuOpen()
-      setTimeout(() => {
-        // with the timeout add hidden
-        menu?.classList.add('hidden')
-      }, 100)
-    }
-  }
+  const handleTheme = () => setDarkTheme(!darkTheme)
 
   return (
     <>
@@ -73,12 +34,12 @@ function App() {
             className="absolute h-[2.5rem] w-10 bottom-[.17rem] left-[.2rem] hover:bg-gray-100 dark:hover:bg-gray-700 pl-[.515rem] pt-[.6rem] rounded-xl cursor-pointer"
             onClick={() => handelOpenMenu()}
           >
-            <div
-              id="hamburger-icon"
-            >
-              <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.3rem]"></div>
-              <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.1rem]"></div>
-              <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.1rem]"></div>
+            <div id="hamburger-icon" >
+              <div className="mt-[.3rem]">
+                {[...Array(3)].map((_, i) => (
+                  <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.17rem]"></div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="absolute right-1 bottom-1">
@@ -88,7 +49,10 @@ function App() {
             />
           </div>
         </div>
-        <Menu />
+        <Menu
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+        />
         <Routes>
           <Route path="/" element={<p>Home - static</p>} />
           <Route path="/overview" element={<Overview />} />
