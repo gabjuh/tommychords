@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import chords_static from "../../chords_static.json"
 import String from "./String";
 import PlayedStrings from "./PlayedStrings";
+import Base from "./Base";
 
 interface ChordTable {
   newChord?: true
@@ -18,23 +19,25 @@ const ChordTable: React.FC<ChordTable> = ({ newChord }) => {
 
   const [selectedId, setSelectedId] = useState(0)
 
-  const base = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV']
-
   return (
     <>
       <div id="chord-table-wrapper" className="relative mb-[6rem]">
+
         <ChordName
           setSelectedId={[selectedId, setSelectedId, objLength]}
           name={obj[selectedId].name}
         />
+
         <PlayedStrings
           obj={obj[selectedId]}
           horizontalDistance={horizontalDistance}
         />
-        <div className="absolute text-lg bottom-[-42px] left-[-.5rem]">
-          {obj[selectedId].base !== 0 ? `${base[obj[selectedId].base]}` : ''}
-        </div>
-        {new Array(4).fill('').map((line, j) => {
+
+        <Base
+          obj={obj[selectedId]}
+        />
+
+        {[...Array(4)].map((line, j) => {
 
           const verticalPosition = 100
           const getVerticalPosition = j * verticalPosition
@@ -52,7 +55,7 @@ const ChordTable: React.FC<ChordTable> = ({ newChord }) => {
                     top: !isFirstFret ? `${getVerticalPosition + stageLineHeight}px` : `${getVerticalPosition}px`
                   }}
                 >
-                  {new Array(6).fill('').map((fret, i) => {
+                  {[...Array(6)].map((fret, i) => {
                     return (
                       <String
                         key={i}
