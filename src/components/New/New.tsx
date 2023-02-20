@@ -1,5 +1,5 @@
 import React from "react";
-import ChordTableInput from "../ChordTableInput/ChordTableInput";
+import ChordTableInput from "../ChordTable/ChordTable";
 import { useState } from "react";
 import PageTitle from "../PageComponents/PageTitle";
 
@@ -36,7 +36,7 @@ const New: React.FC<New> = () => {
   return (
     <>
       <PageTitle text="New Chord" />
-      <ChordTableInput 
+      <ChordTableInput
         newChord={true}
       />
     </>

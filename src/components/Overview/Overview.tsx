@@ -1,5 +1,5 @@
 import React from "react";
-import ChordTableInput from "../ChordTableInput/ChordTableInput";
+import ChordTableInput from "../ChordTable/ChordTable";
 import PageTitle from "../PageComponents/PageTitle";
 
 interface Overview {

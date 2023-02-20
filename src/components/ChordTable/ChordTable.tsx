@@ -5,13 +5,12 @@ import chords_static from "../../chords_static.json"
 import String from "./String";
 import PlayedStrings from "./PlayedStrings";
 
-
 interface ChordTableInput {
-  newChord?: Boolean
+  newChord?: true
 }
 
-const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => { 
-  
+const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
+
   const horizontalDistance = 60
 
   const obj = chords_static
@@ -24,11 +23,11 @@ const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
   return (
     <>
       <div id="chord-input-wrapper" className="relative mb-[6rem]">
-        <ChordName 
+        <ChordName
           setSelectedId={[selectedId, setSelectedId, objLength]}
           name={obj[selectedId].name}
         />
-        <PlayedStrings 
+        <PlayedStrings
           obj={obj[selectedId]}
           horizontalDistance={horizontalDistance}
         />
@@ -45,17 +44,17 @@ const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => {
           return (
             <div key={j}>
               <div className="relative">
-                <div 
-                  className="absolute border-t-[#ddd] w-[301px] mx-auto left-0 right-0" 
+                <div
+                  className="absolute border-t-[#ddd] w-[301px] mx-auto left-0 right-0"
                   id="chord-table-input"
                   style={{
                     borderTop: isFirstFret ? `${stageLineHeight}px solid #ddd` : '0',
                     top: !isFirstFret ? `${getVerticalPosition + stageLineHeight}px` : `${getVerticalPosition}px`
                   }}
-                >  
+                >
                   {new Array(6).fill('').map((fret, i) => {
                     return (
-                      <String 
+                      <String
                         key={i}
                         line={j + 1}
                         i={i}

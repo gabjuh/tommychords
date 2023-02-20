@@ -1,7 +1,7 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import ChordTableInput from './components/ChordTableInput/ChordTableInput'
+import ChordTableInput from './components/ChordTable/ChordTable'
 import Menu from './components/Menu/Menu'
 import Overview from './components/Overview/Overview'
 import New from './components/New/New'
