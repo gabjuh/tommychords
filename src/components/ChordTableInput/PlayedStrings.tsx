@@ -15,7 +15,7 @@ interface PlayedStrings {
 const PlayedStrings: React.FC<PlayedStrings> = ({ obj, horizontalDistance }) => {
   return (
     <>
-      <div className="relative">
+      <div className="relative dark:text-[#ddd]">
         {obj.strings.map((el, i) => {
           const getHorizontalPosition = (i + 1) * 59
           return (
