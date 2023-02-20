@@ -49,7 +49,7 @@
       null,
       null
     ]
-  } ,
+  },
   {
     "name": "E",
     "base": 0,
@@ -121,5 +121,32 @@
       null,
       null
     ]
-  }   
+  },
+  {
+    "name": "B",
+    "base": 2,
+    "strings": [
+      {
+        "fret": 1,
+        "finger": 1
+      },
+      {
+        "fret": 3,
+        "finger": 4
+      },
+      {
+        "fret": 3,
+        "finger": 3
+      },
+      {
+        "fret": 3,
+        "finger": 2
+      },
+      {
+        "fret": 1,
+        "finger": 1
+      },
+      null
+    ]
+  }
 ]
