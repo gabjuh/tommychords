@@ -10,10 +10,10 @@ const ChordNavigation: React.FC<ChordNavigation> = ({ setSelectedId }) => {
 
   return (
     <>
-      <div className="relative h-6 w-56 mx-auto mb-10 ">
-        {/* Back */}
+      <div className="dark:text-[#ddd] relative h-6 w-56 mx-auto mb-10 ">
+        {/* Backward */}
         <span 
-          className="absolute left-[3rem] bottom-[-.5rem] px-5 cursor-pointer text-5xl" 
+          className="absolute left-[3rem] bottom-[-.5rem] px-5 cursor-pointer text-5xl select-none" 
           style={{
             display: val > 0 ? 'inline-block' : 'none'
           }}
@@ -28,7 +28,7 @@ const ChordNavigation: React.FC<ChordNavigation> = ({ setSelectedId }) => {
       
         {/* Forward */}
         <span 
-          className="absolute right-[3rem] bottom-[-.5rem] px-5 cursor-pointer text-5xl" 
+          className="absolute right-[3rem] bottom-[-.5rem] px-5 cursor-pointer text-5xl select-none" 
           style={{
             display: val < len - 1 ? 'inline-block' : 'none'
           }}
