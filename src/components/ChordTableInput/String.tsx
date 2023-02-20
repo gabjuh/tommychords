@@ -20,7 +20,7 @@ const String: React.FC<String> = ({ i, line, horizontalDistance, griff}) => {
   return (
     <>
       <div 
-        className="absolute border-l-[1px] w-[0px] h-[100px]"
+        className="absolute border-l-[1px] border-l-[#444] dark:border-[#ddd] w-[0px] h-[100px]"
         style={{
           left: `${getHorizontalPosition}px`
         }}        
@@ -30,7 +30,7 @@ const String: React.FC<String> = ({ i, line, horizontalDistance, griff}) => {
         line={line}
       />
         <div 
-          className="absolute border bottom-[0px]"
+          className="absolute border-b border-[#444] dark:border-[#ddd] bottom-[0px]"
           style={{
             display: isLastString ? 'none' : 'block', 
             width: isLastString ? 0 : `${horizontalDistance}px`
