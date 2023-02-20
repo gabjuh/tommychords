@@ -11,7 +11,7 @@ const MenuItem: React.FC<MenuItem> = ({ name, route }) => {
     <>
           <Link 
             to={route}
-            className="block text-[#ccc] hover:text-[#fff] hover:text-[1.2rem] cursor-pointer my-1 transition-all ease-in-out duration-150" 
+            className="block dark:text-[#ccc] text-[#222] dark:hover:text-[#fff] hover:text-[#222] hover:text-[1.2rem] cursor-pointer my-1 transition-all ease-in-out duration-150" 
           >            
             {name}
           </Link>
