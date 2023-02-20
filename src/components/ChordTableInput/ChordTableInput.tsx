@@ -7,10 +7,10 @@ import PlayedStrings from "./PlayedStrings";
 
 
 interface ChordTableInput {
-
+  newChord?: Boolean
 }
 
-const ChordTableInput: React.FC<ChordTableInput> = () => { 
+const ChordTableInput: React.FC<ChordTableInput> = ({ newChord }) => { 
   
   const horizontalDistance = 60
 
@@ -46,7 +46,7 @@ const ChordTableInput: React.FC<ChordTableInput> = () => {
             <div key={j}>
               <div className="relative">
                 <div 
-                  className="absolute border-t-[#ddd] w-[301px] mx-auto left-0 right-0" 
+                  className="absolute border-t-[#ddd] w-[301px] mx-auto left-0 right-0 " 
                   id="chord-table-input"
                   style={{
                     borderTop: isFirstFret ? `${stageLineHeight}px solid #ddd` : '0',
