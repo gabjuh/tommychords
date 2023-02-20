@@ -1,14 +1,8 @@
 import React from 'react'
+import { IObj } from './IObj';
 
 interface Base {
-  obj: {
-    name: string;
-    base: number;
-    strings: ({
-      fret: number;
-      finger: number;
-    } | null)[];
-  }
+  obj: IObj
 }
 
 const base = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV']

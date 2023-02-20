@@ -1,16 +1,10 @@
 import React from 'react'
 import String from "./String";
+import { IObj } from './IObj';
 
 interface Fretboard {
   horizontalDistance: number
-  obj: {
-    name: string;
-    base: number;
-    strings: ({
-      fret: number;
-      finger: number;
-    } | null)[];
-  }
+  obj: IObj
 }
 
 const Fretboard: React.FC<Fretboard> = ({

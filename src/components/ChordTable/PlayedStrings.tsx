@@ -1,14 +1,8 @@
 import React from "react";
+import { IObj } from "./IObj";
 
 interface PlayedStrings {
-  obj: {
-    name: string;
-    base: number;
-    strings: ({
-        fret: number;
-        finger: number;
-    } | null)[];
-  }
+  obj: IObj
   horizontalDistance: number
 }
 
@@ -21,7 +15,7 @@ const PlayedStrings: React.FC<PlayedStrings> = ({ obj, horizontalDistance }) => 
           return (
             <span
               key={i}
-              className="absolute bottom-1 text-xl"  
+              className="absolute bottom-1 text-xl"
               style={{
                 right: `${getHorizontalPosition}px`
               }}
