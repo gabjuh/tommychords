@@ -31,7 +31,7 @@ function App() {
   }, [])
 
 
-  const [darkTheme, setDarkTheme] = useState(true) 
+  const [darkTheme, setDarkTheme] = useState(true)
 
   const handleTheme = () => {
     setDarkTheme(!darkTheme)
@@ -39,12 +39,12 @@ function App() {
 
   const handelOpenMenu = () => {
     const menu = document.getElementById('menu') as HTMLElement | null
-  
+
     if (!isMenuOpen) {
       // if closed, remove hidden
       menu?.classList.remove('hidden')
       toggleMenuOpen()
-      setTimeout(() =>{
+      setTimeout(() => {
         // with the timeout remove opacity and rotate
         menu?.classList.remove('opacity-0', '-rotate-90')
       }, 100)
@@ -57,7 +57,7 @@ function App() {
         menu?.classList.add('hidden')
       }, 100)
     }
-  } 
+  }
 
   return (
     <>
@@ -68,21 +68,21 @@ function App() {
           {/* Second title */}
           <p className="italic text-[#333] dark:text-[#eee] text-right text-sm mt-[-.7rem] mr-1 tracking-[2.5px]">Learn chords playfully</p>
           {/* Menu Button */}
-          <div 
-            id="menu-button" 
+          <div
+            id="menu-button"
             className="absolute h-[2.5rem] w-10 bottom-[.17rem] left-[.2rem] hover:bg-gray-100 dark:hover:bg-gray-700 pl-[.515rem] pt-[.6rem] rounded-xl cursor-pointer"
             onClick={() => handelOpenMenu()}
           >
-            <div 
+            <div
               id="hamburger-icon"
-              >
+            >
               <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.3rem]"></div>
               <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.1rem]"></div>
               <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.1rem]"></div>
             </div>
           </div>
           <div className="absolute right-1 bottom-1">
-            <ColorThemeButton 
+            <ColorThemeButton
               handleTheme={handleTheme}
               darkTheme={darkTheme}
             />
