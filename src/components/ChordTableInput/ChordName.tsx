@@ -9,7 +9,7 @@ interface ChordName {
 const ChordName: React.FC<ChordName> = ({ name, setSelectedId }) => {
   return (
     <> 
-      <h1 className="text-4xl mt-5">{name}</h1>
+      <h1 className="dark:text-[#ddd] text-4xl mt-5">{name}</h1>
       <ChordNavigation 
         setSelectedId={setSelectedId}
       />
