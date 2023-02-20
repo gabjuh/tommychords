@@ -32,7 +32,7 @@ const New: React.FC<New> = () => {
     <>
       <PageTitle text="New Chord" />
       <ChordTable
-        input={true}
+        isInput={'new'}
         newChordObj={[newChordObj, setNewChordObj]}
       />
     </>
