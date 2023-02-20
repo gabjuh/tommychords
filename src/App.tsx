@@ -37,7 +37,7 @@ function App() {
             <div id="hamburger-icon" >
               <div className="mt-[.3rem]">
                 {[...Array(3)].map((_, i) => (
-                  <div className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.17rem]"></div>
+                  <div key={i} className="dark:bg-[#ddd] bg-[#333] h-[.15rem] w-[1rem] rounded ml-[.155rem] mt-[.17rem]"></div>
                 ))}
               </div>
             </div>
