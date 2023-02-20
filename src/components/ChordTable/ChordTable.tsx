@@ -5,6 +5,7 @@ import chords_static from "../../chords_static.json"
 import PlayedStrings from "./PlayedStrings";
 import Base from "./Base";
 import Fretboard from "./Fretboard";
+import ChordNavigation from "./ChordNavigation";
 import { IChord } from "./IChord";
 
 interface ChordTable {
@@ -34,8 +35,11 @@ const ChordTable: React.FC<ChordTable> = ({
       <div id="chord-table-wrapper" className="relative mb-[6rem]">
 
         <ChordName
-          selectedId={[selectedId, setSelectedId, objLength]}
           name={obj[selectedId].name}
+        />
+
+        <ChordNavigation
+          selectedId={[selectedId, setSelectedId, objLength]}
         />
 
         <PlayedStrings
