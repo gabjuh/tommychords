@@ -1,4 +1,5 @@
 import React from "react";
+import PageTitle from "../PageComponents/PageTitle";
 
 interface Help {
 
@@ -7,7 +8,7 @@ interface Help {
 const Help: React.FC<Help> = () => {
   return (
     <>
-      <h2>Help</h2>
+      <PageTitle text="Help" />
     </>
   )
 }

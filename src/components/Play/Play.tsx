@@ -1,4 +1,5 @@
 import React from "react";
+import PageTitle from "../PageComponents/PageTitle";
 
 interface Play {
 
@@ -7,7 +8,7 @@ interface Play {
 const Play: React.FC<Play> = () => {
   return (
     <>
-      <h2>Play</h2>
+      <PageTitle text="Play" />
     </>
   )
 }

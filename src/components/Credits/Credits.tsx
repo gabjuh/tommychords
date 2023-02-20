@@ -1,4 +1,5 @@
 import React from "react";
+import PageTitle from "../PageComponents/PageTitle";
 
 interface Credits {
 
@@ -7,7 +8,7 @@ interface Credits {
 const Credits: React.FC<Credits> = () => {
   return (
     <>
-      <h2>Credits</h2>
+      <PageTitle text="Credits" />
     </>
   )
 }

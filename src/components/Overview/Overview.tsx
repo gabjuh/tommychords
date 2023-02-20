@@ -1,5 +1,6 @@
 import React from "react";
 import ChordTableInput from "../ChordTableInput/ChordTableInput";
+import PageTitle from "../PageComponents/PageTitle";
 
 interface Overview {
 
@@ -8,7 +9,7 @@ interface Overview {
 const Overview: React.FC<Overview> = () => {
   return (
     <>
-      <h2>Overview</h2>
+      <PageTitle text="Overview" />
       <ChordTableInput />
     </>
   )
